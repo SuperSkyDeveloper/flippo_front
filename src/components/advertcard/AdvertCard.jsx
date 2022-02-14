@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import bed from "../../assets/images/vector.png"
 import bath from "../../assets/images/bath3.png"
 import wall from "../../assets/images/wall.png"
+import heart from "../../assets/images/heart.png"
 export default class AdvertCard extends Component {
   numberWithSpaces = x => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -18,6 +19,7 @@ export default class AdvertCard extends Component {
     return (
       <div className="col-12 col-md-6 col-lg-4 mt-3">
         <div className="card h-100">
+          
           <img
             className="card-img-top"
             style={{ maxHeight: "30vh", objectFit: "cover" }}
@@ -26,6 +28,9 @@ export default class AdvertCard extends Component {
               advert.address
             }, ${advert.city}, ${advert.postcode}`}
           />
+          <a style={{position:'absolute',left:'85%',top:'2%'}}>
+          <img style={{height:'30px',width:'30px'}} onClick={()=>{console.log("anything")}} src={heart}/>
+          </a>
           <div className="card-body d-flex flex-column">
           <h5 className="card-text">
               ${this.numberWithSpaces(advert.price)}
