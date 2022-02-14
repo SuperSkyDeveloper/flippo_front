@@ -28,7 +28,7 @@ export default class AdvertCard extends Component {
               advert.address
             }, ${advert.city}, ${advert.postcode}`}
           />
-          <a style={{position:'absolute',left:'85%',top:'2%'}}>
+          <a style={{position:'absolute',left:'85%',top:'2%'}}> 
           <img style={{height:'30px',width:'30px'}} onClick={()=>{console.log("anything")}} src={heart}/>
           </a>
           <div className="card-body d-flex flex-column">
