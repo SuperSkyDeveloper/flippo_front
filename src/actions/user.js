@@ -1,6 +1,6 @@
 import axios from "axios";
 import { clearErrors } from "./error";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const SIGN_UP_USER = "SIGN_UP_USER";
 const LOG_IN_USER = "LOG_IN__USER";
@@ -50,11 +50,16 @@ export const loginUser = data => dispatch => {
   axios
     .post(`/user/login`, { ...data })
     .then(response => {
+      console.log(response,"response")
       dispatch(userLoginSuccess(response.data));
       dispatch(clearErrors());
+      toast.success("login successfully");
     })
     .catch(err => {
-      // console.log(err);
+       console.log({...err},"error");
+       let data = {...err}
+       console.log(data?.response?.data?.message,"daras")
+      toast.error(data?.response?.data?.message);
       dispatch(userCreateError(err.response))});
 };
 

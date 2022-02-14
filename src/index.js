@@ -7,7 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 
 import ReactGA from "react-ga";
 import 'font-awesome/css/font-awesome.min.css';
-
+import 'react-toastify/dist/ReactToastify.css';
 import { createBrowserHistory } from "history";
 import "./plugins/axios";
 

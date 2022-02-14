@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import bed from "../../assets/images/vector.png"
+import bath from "../../assets/images/bath3.png"
+import wall from "../../assets/images/wall.png"
 export default class AdvertCard extends Component {
   numberWithSpaces = x => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -8,6 +10,7 @@ export default class AdvertCard extends Component {
 
   render() {
     const { advert , isEdit } = this.props;
+    console.log(this.props,"<--thisssss")
     const advertImage =
       advert.image ||
       "https://res.cloudinary.com/dpjzmbojz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1597782723/No_image_3x4.svg_dqj5vw.png";
@@ -24,13 +27,36 @@ export default class AdvertCard extends Component {
             }, ${advert.city}, ${advert.postcode}`}
           />
           <div className="card-body d-flex flex-column">
-            <h5 className="card-title mt-auto">
-              {advert.address}, {advert.city}
-            </h5>
-            <h6 className="card-subtitle mb-2 text-muted">{advert.postcode}</h6>
-            <p className="card-text">
+          <h5 className="card-text">
               ${this.numberWithSpaces(advert.price)}
+              </h5> 
+              <div style={{display:'flex',justifyContent:"space-evenly",right:'11%',position:'relative',top:'5%'}}>
+                <div style={{display:'flex'}}>
+                <img style={{height:20,width:20}} src={bed}/>
+                <p style={{marginLeft:'10px'}}>{advert?.nrOfBathrooms}</p>
+                </div>
+                <div style={{display:'flex'}}>
+                <img style={{height:20,width:20}} src={bath}/>
+                <p style={{marginLeft:'10px'}}>{advert?.nrOfBathrooms}</p>
+                </div>
+                <div style={{display:'flex'}}>
+                <img style={{height:20,width:20}} src={bath}/>
+                <p style={{marginLeft:'10px'}}>{advert?.sqrMeter} sqft</p>
+                </div>
+              </div>
+            <p className="card-text" style={{color:'#646464',fontSize:'16px'}}>
+              {advert.address}, {advert.city}
             </p>
+            <div style={{ borderTop: "1px solid #C4C4C4 ", marginLeft: 20, marginRight: 20 }}>
+              <div style={{display:'flex',marginTop:'5%',fontSize:'14px'}}>
+                <p style={{right:20,position:'relative'}}>Closing Date {advert?.closingDate}</p>
+
+                <div style={{display:'flex',marginLeft:'30px'}}>
+                  <img style={{height:'20px',width:'20px'}} src={wall}/>
+                  <p>TRIDEL</p>
+                </div>
+              </div>
+            </div>
            {!isEdit && <Link to={`/x-for-sale/${advert.id}`} className="btn btn-info">
               READ MORE
             </Link>}

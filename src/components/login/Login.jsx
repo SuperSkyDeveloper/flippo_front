@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/user";
 import { Link } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 
 const initialState = {
   email: "",
@@ -80,6 +81,7 @@ class LoginForm extends Component {
               <Link to="/register">Sign Up</Link>
             </div>
           </div>
+          <ToastContainer />
         </div>
       </Fragment>
     );
