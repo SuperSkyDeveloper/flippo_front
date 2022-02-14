@@ -52,7 +52,7 @@ export default class AdvertCard extends Component {
                 <p style={{right:20,position:'relative'}}>Closing Date {advert?.closingDate}</p>
 
                 <div style={{display:'flex',marginLeft:'30px'}}>
-                  <img style={{height:'20px',width:'20px'}} src={wall}/>
+                  <img style={{height:'20px',width:'20px',marginRight:'5px'}} src={wall}/>
                   <p>TRIDEL</p>
                 </div>
               </div>
