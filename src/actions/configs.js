@@ -1,0 +1,1 @@
+export const baseUrl = "https://flippohome.com:4000"

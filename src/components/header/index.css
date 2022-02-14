@@ -1,0 +1,98 @@
+.header-section {
+  padding: 20px 0;
+}
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.flippo-logo {
+  width: 180px;
+  display: block;
+}
+.flippo-logo img {
+  max-width: 100%;
+}
+.right-nav {
+  gap: 20px;
+}
+.right-nav li a, .right-nav li > div{
+  display: block;
+  padding: 8px 20px;
+  font-weight: 500;
+  border-radius: 5px 5px 5px 5px;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 17px;
+  font-family: 'Heebo', sans-serif;
+  color: #3D57E2;
+  cursor: pointer;
+}
+.login {
+  color: #4FAAA3;
+}
+.right-nav li a.btn {
+  border: 1px solid #3E00EE;
+  background-color: #3D57E2;
+  color: #fff;
+}
+.header-section ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.center-nav {
+  gap: 30px;
+}
+.center-nav li a{
+  gap: 5px;
+  color: #55565E;
+}
+.menu-icon {
+  display: none;
+  border: 1px solid #000;
+  padding: 8px 12px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .header-content {
+    display: block;
+    position: relative;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .header-section .center-nav, .header-section .right-nav {
+    display: none;
+    
+  }
+  .header-section .right-nav{ 
+    padding: 30px 0 0;
+  }
+  .show-menu .center-nav, .show-menu .right-nav {
+    display: block;
+  }
+  .header-section .center-nav li, .header-section .right-nav li {
+    display: block;
+    text-align: center;
+  }
+  .header-section .center-nav li a, .header-section .center-nav li > div {
+    display: inline-flex;
+    margin-top: 30px;
+  }
+  .header-section .right-nav li a, .header-section .right-nav li > div {
+    display: inline-flex;
+    margin-bottom: 15px;
+  }
+}

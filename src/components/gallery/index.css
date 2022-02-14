@@ -1,0 +1,279 @@
+
+.border-00{
+  border-width: 0px;
+}
+
+.custom-arrow {
+  background: #000;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+.custom-arrow:hover {
+  background: #333;
+}
+.custom-arrow:before {
+  display: none;
+}
+.custom-arrow.slick-prev {
+  margin-left: 25px;
+}
+.custom-arrow.slick-next {
+  margin-right: 25px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+ /* tailwind */
+.bg-white{
+  background-color: #fff;
+} 
+.overflow-auto{
+  overflow: auto;
+} 
+.h-screen{
+  height: 100vh;
+}
+.flex{
+  display: flex;
+} 
+.fixed{
+  position: fixed;
+} 
+.top-0{
+  top: 0px;
+} 
+.left-0{
+  left: 0px;
+} 
+.w-full {
+  width: 100%;
+} 
+.h-full{
+  height: 100%;
+} 
+.items-center{
+  align-items: center;
+} 
+.justify-center{
+  justify-content: center;
+} 
+.z-50 {
+  z-index: 50;
+}
+.z-20{
+  z-index: 20;
+}
+.overlay{
+  position: absolute;
+  top: 0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0,0,0,.7);
+}
+.absolute {
+  position: absolute;
+}
+.top-2 {
+  top: 8px;
+}
+.right-3 {
+  right: 12px;
+}
+.py-4{
+  padding-top: 16;
+  padding-bottom: 16;
+} 
+.fa.text-xl {
+  font-size: 32px !important;
+}
+.px-6{
+  padding-left: 24px;
+  padding-right: 24px;
+} 
+.border-0{
+  border: 0px;
+} 
+.border-b{
+  border-bottom: 1px;
+} 
+.border-gray-3{
+  border-color: rgba(224, 224, 224,1);
+}
+.text-2xl{
+  font-size: 24px;
+} 
+.font-medium{
+  font-weight: 500;
+}
+.arrow-left {
+  font-size: 32px !important;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  margin-top: -30px;
+  z-index: 9;
+}
+.arrow-right {
+  font-size: 32px !important;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  right: 10px;
+  z-index: 9;
+}
+.grid{
+  display: grid;
+} 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}  
+.pb-6 {
+  padding-bottom: 24px;
+}
+.pt-4{
+  padding-top: 16px;
+}  
+.my-4{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.pb-3{
+  padding-bottom: 12px;
+}
+.overflow-visible{
+  overflow: visible;
+}   
+.gap-1{
+  gap: 4px;
+}
+.relative{
+  position: relative;
+} 
+.border-2{
+  border-width: 2px;
+} 
+.border-solid{
+  border-style: solid;
+} 
+.p-8{
+  padding: 32px;
+}
+.shadow-shadow-6 {
+  --tw-shadow: 0px 3.69052px 12.9168px rgba(62, 145, 243, 0.1);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.border-transparent{
+  border-color: transparent;
+} 
+.cursor-pointer{
+  cursor: pointer;
+} 
+.min-w-20{
+  min-width: 80px;
+}
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+.h-20{
+  height: 80px;
+} 
+.border-black{
+  border-color: #000;
+} 
+.h-custom-80{
+  height: calc(100% - 58px);
+}
+.text-xl {
+  font-size: 20px;
+}
+.pt-4 {
+  padding-top: 16px;
+}
+.bg-black{
+  background-color: #000;
+} 
+.text-center{
+  text-align: center;
+}
+.leading-0 {
+  line-height: 0;
+}
+.object-cover{
+  object-fit: cover;
+}
+.mt-3{
+  margin-top: 12px;
+} 
+.justify-between{
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px){
+  .md\:h-auto {
+    height: auto;
+  }
+  .md\:px-12{
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+  .md\:flex{
+    display: flex;
+  }
+  .md\:max-w-320{
+    max-width: 320px;
+  }
+  .md\:pr-4{
+    padding-right: 16px;
+  }
+  .md\:border-r{
+    border-right-width: 1px;
+  }
+  .md\:border-gray-3{
+    border-color: rgba(224, 224, 224,1);
+  }
+  .md\:max-h-screen-2{
+    max-height: calc(100vh - 202px);
+  }
+  .md\:pb-0{
+    padding-bottom: 0px;
+  }
+  .md\:pr-3{
+    padding-right: 12px;
+  }
+  .md\:grid{
+    display: grid;
+  }
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 2fr));
+  }
+  .md\:pl-4{
+    padding-left: 16px;
+  }
+  .md\:h-screen-2 {
+    height: calc(100vh - 220px);
+  }
+  .md\:rounded-20 {
+    border-radius: 20px;
+  }
+  .md\:h-screen{
+    height: 100vh;
+  }
+  .md\:p-8 {
+    padding: 32px;
+  }
+}
+

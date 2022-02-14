@@ -1,0 +1,9 @@
+version: '3'
+services:
+  flippo-web:
+    image: flippo-web
+    stdin_open: true
+    environment:
+      - REACT_APP_API_BASE_URL=http://sfo.bastion.flippo.homes:4000/
+    ports:
+      - '3000:3000'
