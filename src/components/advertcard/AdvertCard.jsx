@@ -29,7 +29,7 @@ export default class AdvertCard extends Component {
               advert.address
             }, ${advert.city}, ${advert.postcode}`}
           />
-          <img style={{height:'30px',width:'30px'}} onClick={()=>{console.log("anything")}} src={heart}  alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+          <img style={{height:'30px',width:'30px',position:'absolute',left:'85%',top:'2%'}} onClick={()=>{console.log("anything")}} src={heart}  alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
               advert.address
             }, ${advert.city}, ${advert.postcode}`}/>
           <div className="card-body d-flex flex-column">
