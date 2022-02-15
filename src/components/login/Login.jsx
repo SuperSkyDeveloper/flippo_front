@@ -81,7 +81,7 @@ class LoginForm extends Component {
               <Link to="/register">Sign Up</Link>
             </div>
           </div>
-          <ToastContainer />
+          {/* <ToastContainer autoClose={4000} limit={0} /> */}
         </div>
       </Fragment>
     );

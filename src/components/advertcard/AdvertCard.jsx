@@ -17,8 +17,10 @@ export default class AdvertCard extends Component {
       "https://res.cloudinary.com/dpjzmbojz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1597782723/No_image_3x4.svg_dqj5vw.png";
 
     return (
-      <div className="col-12 col-md-6 col-lg-4 mt-3">
-        <div className="card h-100">
+      <div className="col-8 col-md-6 col-lg-4 mt-3">
+        {!isEdit && <Link to={`/x-for-sale/${advert.id}`} style={{textDecoration:'none',color:'#000'}}>:<Link to={`/edit/x-for-sale/${advert.id}`} style={{textDecoration:'none'}}/>
+        
+        <div  className="card h-80">
           
           <img
             className="card-img-top"
@@ -49,7 +51,7 @@ export default class AdvertCard extends Component {
                 <p style={{marginLeft:'10px'}}>{advert?.sqrMeter} sqft</p>
                 </div>
               </div>
-            <p className="card-text" style={{color:'#646464',fontSize:'16px'}}>
+            <p className="card-text" style={{color:'#00000',fontSize:'16px'}}>
               {advert.address}, {advert.city}
             </p>
             <div style={{ borderTop: "1px solid #C4C4C4 ", marginLeft: 20, marginRight: 20 }}>
@@ -62,14 +64,17 @@ export default class AdvertCard extends Component {
                 </div>
               </div>
             </div>
-           {!isEdit && <Link to={`/x-for-sale/${advert.id}`} className="btn btn-info">
+           {/* {!isEdit && <Link to={`/x-for-sale/${advert.id}`} className="btn btn-info">
               READ MORE
             </Link>}
             {isEdit && <Link to={`/edit/x-for-sale/${advert.id}`} className="btn btn-info">
               READ MORE
-            </Link>}
+            </Link>} */}
           </div>
         </div>
+        </Link>
+        }
+
       </div>
     );
   }

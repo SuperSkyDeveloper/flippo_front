@@ -40,7 +40,7 @@ class App extends Component {
           pauseOnHover
         />
         {/* Same as */}
-        <ToastContainer />
+        {/* <ToastContainer /> */}
         <Switch>
           <Route path="/myadverts" component={MyAdverts} />
           <Route path="/favorites" component={FavoriteAdverts} />
