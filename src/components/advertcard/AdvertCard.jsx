@@ -11,7 +11,6 @@ export default class AdvertCard extends Component {
 
   render() {
     const { advert , isEdit } = this.props;
-    console.log(this.props,"<--thisssss")
     const advertImage =
       advert.image ||
       "https://res.cloudinary.com/dpjzmbojz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1597782723/No_image_3x4.svg_dqj5vw.png";
@@ -30,24 +29,30 @@ export default class AdvertCard extends Component {
               advert.address
             }, ${advert.city}, ${advert.postcode}`}
           />
-          <a style={{position:'absolute',left:'85%',top:'2%'}}> 
-          <img style={{height:'30px',width:'30px'}} onClick={()=>{console.log("anything")}} src={heart}/>
-          </a>
+          <img style={{height:'30px',width:'30px'}} onClick={()=>{console.log("anything")}} src={heart}  alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+              advert.address
+            }, ${advert.city}, ${advert.postcode}`}/>
           <div className="card-body d-flex flex-column">
           <h5 className="card-text">
               ${this.numberWithSpaces(advert.price)}
               </h5> 
               <div style={{display:'flex',justifyContent:"space-evenly",right:'11%',position:'relative',top:'5%'}}>
                 <div style={{display:'flex'}}>
-                <img style={{height:20,width:20}} src={bed}/>
+                <img style={{height:20,width:20}} src={bed}   alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+              advert.address
+            }, ${advert.city}, ${advert.postcode}`}/>
                 <p style={{marginLeft:'10px'}}>{advert?.nrOfBathrooms}</p>
                 </div>
                 <div style={{display:'flex'}}>
-                <img style={{height:20,width:20}} src={bath}/>
+                <img style={{height:20,width:20}} src={bath}   alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+              advert.address
+            }, ${advert.city}, ${advert.postcode}`}/>
                 <p style={{marginLeft:'10px'}}>{advert?.nrOfBathrooms}</p>
                 </div>
                 <div style={{display:'flex'}}>
-                <img style={{height:20,width:20}} src={bath}/>
+                <img style={{height:20,width:20}} src={bath}   alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+              advert.address
+            }, ${advert.city}, ${advert.postcode}`}/>
                 <p style={{marginLeft:'10px'}}>{advert?.sqrMeter} sqft</p>
                 </div>
               </div>
@@ -59,7 +64,9 @@ export default class AdvertCard extends Component {
                 <p style={{right:20,position:'relative'}}>Closing Date {advert?.closingDate}</p>
 
                 <div style={{display:'flex',marginLeft:'30px'}}>
-                  <img style={{height:'20px',width:'20px',marginRight:'5px'}} src={wall}/>
+                  <img style={{height:'20px',width:'20px',marginRight:'5px'}}   alt={`${advert.isForRent ? "For rent:" : "For Sale:"} ${
+              advert.address
+            }, ${advert.city}, ${advert.postcode}`}src={wall}/>
                   <p>TRIDEL</p>
                 </div>
               </div>

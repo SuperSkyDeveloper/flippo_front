@@ -1,6 +1,6 @@
 import axios from "axios";
 import { clearErrors } from "./error";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const SIGN_UP_USER = "SIGN_UP_USER";
 const LOG_IN_USER = "LOG_IN__USER";
